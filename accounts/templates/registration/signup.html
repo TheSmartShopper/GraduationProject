@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                    <h2>Sign up Form</h2>
+                    <form method="post">
+                        {% csrf_token %}
+
+                        {% bootstrap_form form %}
+
+                        <button type="submit">Sign up</button>
+                    </form>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

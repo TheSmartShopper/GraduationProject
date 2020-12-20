@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <form action="" method="post">
+
+                      {% csrf_token %}
+                {% bootstrap_form User_Form%}
+                {% bootstrap_form profileform%}
+                    <button type="submit">save</button>
+                <a  href="{%url 'accounts:StoreAdminProfileView'%}"class="btn btn-danger">cancel  </a>
+
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

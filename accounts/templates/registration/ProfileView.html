@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h1> Store Admin Profile View </h1>
+
+
+            {{ form }}
+{#            <div class="col-sm-6">#}
+{#                <img src={{ profile.StoreAdmin_image.url }} alt="" style="width:100%">#}
+{#                <a href=""></a>#}
+{#                <br><a href=""> name :{{ profile.user.first_name }}</a>#}
+{#                <br><a href="">address :{{ profile.StoreAdmin_address }}</a>#}
+{#                <br><a href="">Join at :{{ profile.StoreAdmin_join_date|date:'d M o' }}</a>#}
+{#                <br><a href="">Store Admin country :{{ profile.StoreAdmin_country.name }}</a>#}
+{#                <br><a href=""></a>#}
+{#                <br>#}
+{#                <a href="{% url 'accounts:StoreAdminProfileEditView' %}" class="btn btn-danger">Edit </a>#}
+{#            </div>#}
+        </div>
+    </div>
+{% endblock %}
