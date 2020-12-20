@@ -32,5 +32,53 @@ def signup(request):
     return render(request, 'registration/signup.html', {'form': form})
 
 
-def Profile(request):
+def profile(request):
     return render(request, 'registration/ProfileView.html', {})
+
+
+def editProfile(request):
+    return None
+
+
+def shoppingCart(request):
+    return None
+
+
+def favorite(request):
+    return None
+
+
+def shoppinglist(request):
+    return None
+
+
+def Offer(request):
+    return None
+
+
+def Reward(request):
+    return None
+
+
+def ProvideReview(request):
+    return None
+
+
+def ManageOffer(request):
+    return None
+
+
+def ManagerProduct(request):
+    return None
+
+
+def ManageAdvertisement(request):
+    return None
+
+
+def ManageReward(request):
+    return None
+
+
+def ManageAccounts(request):
+    return None
