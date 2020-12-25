@@ -4,22 +4,39 @@
 
 {% block content %}
     <div class="container">
-        <div class="row">
-            <h1> Store Admin Profile View </h1>
+
+        {% if form.Is_Customer %}
+            <h1> Customer Profile View </h1>
+        {% else %}
+            <h1> store admin Profile View </h1>
+        {% endif %}
+        {% for U in user %}
+            {% if U == Is_Customer %}
+
+            {% else %}
+                {{ U.label }}&emsp; &emsp; {{ U.value }}
+            {% endif %}
+            <hr>
+        {% endfor %}
+        {% if form.Is_Customer %}
+            {% for U in form %}
+                {{ U.label }}&emsp; &emsp; {{ U.value }}
+                {% if foo %}{% endif %}
+                <hr>
+            {% endfor %}
+        {% endif %}
+        {% if form.Is_StoreAdmin %}
+            {% for U in form %}
+                {{ U.label }}&emsp; &emsp; {{ U.value }}
+                {% if foo %}{% endif %}
+                <hr>
+            {% endfor %}
+        {% endif %}
 
 
-            {{ form }}
-{#            <div class="col-sm-6">#}
-{#                <img src={{ profile.StoreAdmin_image.url }} alt="" style="width:100%">#}
-{#                <a href=""></a>#}
-{#                <br><a href=""> name :{{ profile.user.first_name }}</a>#}
-{#                <br><a href="">address :{{ profile.StoreAdmin_address }}</a>#}
-{#                <br><a href="">Join at :{{ profile.StoreAdmin_join_date|date:'d M o' }}</a>#}
-{#                <br><a href="">Store Admin country :{{ profile.StoreAdmin_country.name }}</a>#}
-{#                <br><a href=""></a>#}
-{#                <br>#}
-{#                <a href="{% url 'accounts:StoreAdminProfileEditView' %}" class="btn btn-danger">Edit </a>#}
-{#            </div>#}
-        </div>
+        <a class="nav-link" href="{% url 'accounts:edit_profile' %}">edit Profile</a>
+
+
     </div>
 {% endblock %}
+

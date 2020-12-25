@@ -22,7 +22,8 @@
         {% csrf_token %}
         {% bootstrap_form form %}
         <br>
-        {% bootstrap_button "login" button_type="submit" button_class="btn-primary" %}
+
+        <button type="submit"  href="{% url 'accounts:profile' %}" >login</button>
         <input type="hidden" name="next" value="{{ next }}"/>
 
     </form>

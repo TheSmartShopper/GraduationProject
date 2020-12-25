@@ -42,10 +42,17 @@ urlpatterns = [
          auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
          name='password_reset_complete'),
     # Customer view
+
+    path('profile/', views.ProfileView.as_view(), name='profile'),
+    path('profile/edit', views.EditProfileView, name='edit_profile'),
     path('signup/', views.signup, name='signup'),
-    path('profile/', views.profile, name='Profile'),
-    path('profile/edit', views.editProfile, name='edit Profile'),
-    path('profile/edit', views.shoppinglist, name='Shopping list'),
+    path('shopping_list', views.shoppinglist, name='Shopping list'),
+
+]
+'''
+
+
+    path('shopping_list', views.shoppinglist, name='Shopping list'),
     path('favorite', views.favorite, name='Favorite'),
     path('Offer', views.Offer, name='Offer'),
     path('reward', views.Reward, name='Reward'),
@@ -62,4 +69,4 @@ urlpatterns = [
     path('Manage Accounts', views.ManageAccounts, name='Manage Accounts'),
 
 
-]
+'''

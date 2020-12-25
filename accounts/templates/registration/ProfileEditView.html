@@ -2,22 +2,13 @@
 {% load bootstrap4 %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <form action="" method="post">
+    <form action="" method="post">
 
-                      {% csrf_token %}
-                {% bootstrap_form User_Form%}
-                {% bootstrap_form profileform%}
-                    <button type="submit">save</button>
-                <a  href="{%url 'accounts:StoreAdminProfileView'%}"class="btn btn-danger">cancel  </a>
+        {% csrf_token %}
+        {% bootstrap_form profileForm %}
+        {% bootstrap_form userForm %}
+        <button type="submit">save</button>
 
+    </form>
 
-
-                </form>
-
-            </div>
-        </div>
-    </div>
 {% endblock %}
